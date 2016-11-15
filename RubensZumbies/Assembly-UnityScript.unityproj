@@ -105,9 +105,6 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity 5.5.0b10/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
- <Reference Include="Google.ProtocolBuffers">
- <HintPath>C:/Users/Harold/Desktop/Unity_Temp/01_Ruben Files/RubensZumbies5.5/RubensZumbies/Assets/Plugins/Google.ProtocolBuffers.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
