@@ -54,7 +54,6 @@ public class GvrAudioSource : MonoBehaviour {
       }
     }
   }
-
   [SerializeField]
   private AudioClip sourceClip = null;
 

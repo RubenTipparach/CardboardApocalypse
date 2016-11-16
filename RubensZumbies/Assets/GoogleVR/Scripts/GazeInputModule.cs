@@ -65,8 +65,6 @@ public class GazeInputModule : BaseInputModule {
   /// Allows time for the UI elements to make their state transitions.
   private const float clickTime = 0.1f;  // Based on default time for a button to animate to Pressed.
 
-    Gun gunscript;
-
   /// @cond
   public override bool ShouldActivateModule() {
 
@@ -132,12 +130,10 @@ public class GazeInputModule : BaseInputModule {
       // Delay new events until clickTime has passed.
     } else if (!pointerData.eligibleForClick &&
         (isGvrTriggered || Input.GetMouseButtonDown(0))) {
-            // New trigger action.
-            //Debug.Log("clicked shoot!");
-            gunscript.Shoot();
-            HandleTrigger();
+      // New trigger action.
+      HandleTrigger();
     } else if (handlePendingClickRequired) {
-            // Check if there is a pending click to handle.
+      // Check if there is a pending click to handle.
       HandlePendingClick();
     }
   }
