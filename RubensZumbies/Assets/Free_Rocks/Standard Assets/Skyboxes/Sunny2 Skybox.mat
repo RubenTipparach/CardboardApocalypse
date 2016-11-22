@@ -57,14 +57,20 @@ Material:
         m_Texture: {fileID: 2800000, guid: db6ded423daf6e449ac50a3e1f99a36a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - first:
+        name: _Exposure
+      second: 1.36
+    - first:
+        name: _Rotation
+      second: 0
     m_Colors:
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _Tint
-      second: {r: 0.39221898, g: 0.3839749, b: 0.49264705, a: 0.5019608}
+      second: {r: 0.16176468, g: 0.026167812, b: 0.026167812, a: 0.5019608}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
