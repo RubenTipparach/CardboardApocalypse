@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MonsterAlpha : MonoBehaviour {
 
@@ -18,6 +19,8 @@ public class MonsterAlpha : MonoBehaviour {
     public float health;
     [SerializeField]
     string gameManagerName= "MonsterGameManager";
+
+    NavMeshAgent agent;
 
     [SerializeField]
     GameObject destroyEffect;
@@ -41,15 +44,17 @@ public class MonsterAlpha : MonoBehaviour {
 	void Start () {
         player = GameObject.Find(playerName);
         health = initialHealth;
+        agent = GetComponent<NavMeshAgent>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
+        //transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
 
-        Vector3 lookRot = (player.transform.position - transform.position).normalized;
-        transform.rotation = Quaternion.LookRotation(lookRot);
-	}
+        //Vector3 lookRot = (player.transform.position - transform.position).normalized;
+        //transform.rotation = Quaternion.LookRotation(lookRot);
+        agent.destination = player.transform.position;
+    }
     
     void CheckHealth()
     {
